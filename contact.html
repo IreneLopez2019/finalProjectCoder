@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Irene Lopez</title>
+</head>
+
+<body>
+    <section>
+        <section>
+            <div>Logo</div>
+
+            <nav>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#personalInformation">Personal Info</a></li>
+                    <li><a href="skills.html">Skills</a></li>
+                    <li><a href="projects.html">Projects</a></li>
+                    <li><a href="contact.html">Contact me!</a></li>
+                </ul>
+            </nav>
+        </section>
+
+        <section>
+            <a name="form"></a>
+                <form action="gracias.html" method="post" enctype="multipart/form-data">
+                <fieldset>
+                    <legend>Contact me!</legend>
+                    <label>Name</label>
+                    <input type="text" name="name" placeholder="Ire">
+                    <br>
+                    <label>Surname</label>
+                    <input type="text" name="Surname" placeholder="Lopez">
+                    <br>
+                    <label>Message</label>
+                    <textarea name="mensaje" placeholder="Hey Ire! I´m writting to you..."></textarea>
+                    <br>
+                    <label>Country</label>
+                    <select name="opciones_seleccion">
+                        <option selected="selected">I´m from</option>
+                        <option value="1">Arg</option>
+                        <option value="2">Mex</option>
+                        <option value="3">Usa</option>
+                        <option value="4">Col</option>
+                        <option value="4">Other</option>
+                    </select>
+                    <br>
+                    <label>Would you like to receive my newsletters?</label>
+                    <input type="radio" name="option" value="Si">Yes!
+                    <input type="radio" name="option" value="No">No :(
+                    <br>
+                    <br>
+                    <input type="reset" value="Reset">
+                    <input type="submit" name="button" value="Send">
+                </fieldset>
+                </form>
+            </section>
+</body>
