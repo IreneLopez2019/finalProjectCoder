@@ -1,0 +1,28 @@
+.main-content {
+    .textAndImage {
+        margin-bottom: 180px;
+        .homeImg {
+            width: 50%;
+            position: relative;
+        }
+        .informationWrapper {
+            position: absolute;
+            content: "";
+            top: 340px;
+            right: 600px;
+
+            width: 425px;
+            padding: 25px;
+        }
+
+        .informationWrapper,
+        p,
+        h1 {
+            background-color: white;
+        }
+
+        h1 {
+            border-bottom: 1px solid black;
+        }
+    }
+}
