@@ -1,0 +1,38 @@
+@keyframes tonext {
+    75%,
+    99% {
+        left: 0;
+    }
+
+    95%,
+    98% {
+        left: 100%;
+    }
+}
+
+@keyframes tostart {
+    75%,
+    99% {
+        left: 0;
+    }
+
+    95%,
+    98% {
+        left: -300%;
+    }
+}
+
+@keyframes snap {
+    96% {
+        scroll-snap-align: center;
+    }
+    97% {
+        scroll-snap-align: none;
+    }
+    99% {
+        scroll-snap-align: none;
+    }
+    100% {
+        scroll-snap-align: center;
+    }
+}
