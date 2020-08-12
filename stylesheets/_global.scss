@@ -9,11 +9,14 @@
 
 h1, h2, h3 {
     font-family: var(--primary-font);
-    margin-bottom: 10px;
+    margin-bottom: 12px;
+    letter-spacing: 1px;
 }
 
 p {
     font-family: var(--secondary-font);
+    margin-bottom: 12px;
+
 }
 
 .main-content {
@@ -23,4 +26,10 @@ p {
     min-height: 100vh;
     margin: auto;
 
+}
+ol,
+li {
+    list-style: none;
+    margin: 0;
+    padding: 0;
 }
