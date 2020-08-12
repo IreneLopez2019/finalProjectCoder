@@ -1,28 +1,33 @@
 .navbar-wrapper {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     font-family: var(--secondary-font);
     padding: 60px;
-    ul {
-        display: flex;
+
+    .logo {
+        font-size: 30px;
+        letter-spacing: 2px;
+        font-family: var(--primary-font);
     }
 
-    .nav-item {
-        list-style-type: none;
-        list-style: none;
+    ul {
+        display: flex;
 
-        + li {
-            margin-left: 15px;
+        li {
+            + li {
+                margin-left: 15px;
+            }
         }
-        a {
-            text-decoration: none;
+    }
+    a {
+        text-decoration: none;
+        color: black;
+        &:hover {
             color: black;
-            &:hover {
-                color: black;
-            }
-            &:visited {
-                color: black;
-            }
+        }
+        &:visited {
+            color: black;
         }
     }
 }
