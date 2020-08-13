@@ -1,6 +1,7 @@
 .carousel-wrapper {
     position: relative;
     padding-top: 75%;
+    margin-bottom: var(--margin-bottom-bg);
 }
 
 .carousel-viewport {
@@ -62,35 +63,11 @@
     transition: transform 0.1s;
 }
 
-.carousel-prev,
-.carousel-next {
-    display: flex;
-    position: absolute;
-    margin-top: 40%;
-    width: 4rem;
-    height: 4rem;
-    transform: translateY(-50%);
-    font-size: 0;
-    outline: 0;
-
-    a {
-        width: 100%;
-        border-radius: 50%;
-    }
-}
-
-.carousel-prev {
-    left: 0;
-}
-
-.carousel-next {
-    right: 0;
-}
-
 .portfolio-wrapper {
     display: grid;
+    grid-gap: 5px;
     max-width: 950px;
-    grid-template-columns: repeat(6, 1fr);
+    grid-template-columns: repeat(5, 1fr);
 
     img {
         max-width: 100%;
@@ -103,6 +80,38 @@
         grid-column-end: 6;
         grid-row-start: 1;
         grid-row-end: 2;
+        position: relative;
+        cursor: pointer;
+
+        &:hover {
+            .overlay {
+                opacity: 1;
+            }
+        }
+
+        .overlay {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 100%;
+            width: 100%;
+            opacity: 0;
+            transition: 0.5s ease;
+            background-color: #26262657;
+        }
+
+        .text {
+            color: white;
+            background-color: transparent;
+            font-size: 20px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+        }
     }
 
     .image-2 {
@@ -117,26 +126,5 @@
         grid-column-end: 6;
         grid-row-start: 2;
         grid-row-end: 3;
-    }
-
-    .image-4 {
-        grid-column-start: 1;
-        grid-column-end: 4;
-        grid-row-start: 3;
-        grid-row-end: 5;
-    }
-
-    .image-5 {
-        grid-column-start: 4;
-        grid-column-end: 6;
-        grid-row-start: 3;
-        grid-row-end: 5;
-    }
-
-    .image-6 {
-        grid-column-start: 1;
-        grid-column-end: 6;
-        grid-row-start: 5;
-        grid-row-end: 6;
     }
 }
