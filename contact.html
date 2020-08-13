@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="./style.css">
     <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,400;0,600;1,400;1,600&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/pattern.css" rel="stylesheet">
     <title>Irene Lopez</title>
 </head>
 
@@ -25,42 +26,64 @@
             </nav>
         </section>
 
-        <section>
-            <a name="form"></a>
+        <section class="form-wrapper">
+            <div class="pattern-grid-lg pattern"></div>
+            <div class="circle-form">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 218.26 167.18"><defs><style>.cls-1{fill:#1d1d1b;}</style></defs><g id="Capa_2" data-name="Capa 2"><g id="Capa_1-2" data-name="Capa 1"><path class="cls-1" d="M121.32,3.8c-39.54-9.66-100.13-2.14-117,37-17.56,40.75,21.33,94.74,64,115,55.17,26.19,134.9,4.64,148-39C229.05,74.39,177,17.4,121.32,3.8Z"/></g></g></svg>
+            </div>
             <form action="gracias.html" method="post" enctype="multipart/form-data">
-                <fieldset>
-                    <legend>Contact me!</legend>
+                <div class="input-wrapper">
                     <label>Name</label>
                     <input type="text" name="name" placeholder="Ire">
-                    <br>
+                </div>
+
+                <div class="input-wrapper">
                     <label>Surname</label>
                     <input type="text" name="Surname" placeholder="Lopez">
-                    <br>
+                </div>
+
+                <div class="input-wrapper">
                     <label>Message</label>
                     <textarea name="mensaje" placeholder="Hey Ire! I´m writting to you..."></textarea>
-                    <br>
+                </div>
+
+                <div class="input-wrapper">
                     <label>Country</label>
                     <select name="opciones_seleccion">
-                        <option selected="selected">I´m from</option>
-                        <option value="1">Arg</option>
-                        <option value="2">Mex</option>
-                        <option value="3">Usa</option>
-                        <option value="4">Col</option>
-                        <option value="4">Other</option>
-                    </select>
-                    <br>
+                            <option selected="selected">I´m from</option>
+                            <option value="1">Arg</option>
+                            <option value="2">Mex</option>
+                            <option value="3">Usa</option>
+                            <option value="4">Col</option>
+                            <option value="4">Other</option>
+                        </select>
+                </div>
+
+                <div class="input-wrapper form-newsletter">
                     <label>Would you like to receive my newsletters?</label>
-                    <input type="radio" name="option" value="Si">Yes!
-                    <input type="radio" name="option" value="No">No :(
-                    <br>
-                    <br>
+                    <div class="radio-button-wrapper">
+                        <div>
+                            <input type="radio" name="option" value="Si">
+                            <span>Yes!</span>
+                        </div>
+
+                        <div>
+                            <input type="radio" name="option" value="No">
+                            <span>No :(</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="input-wrapper form-terms">
                     <input type="checkbox">
                     <label>I´ve read and accept the <a href="Privacy">Terms and conditions</a></label>
-                    <br>
+                </div>
+
+                <div class="input-wrapper form-button">
                     <input type="reset" value="Reset">
                     <input type="submit" name="button" value="Send">
+                </div>
 
-                </fieldset>
             </form>
         </section>
         <footer>
