@@ -11,6 +11,7 @@ h1,
 h2,
 h3 {
     margin-bottom: 12px;
+    color: #3b317a;
 }
 
 p {
@@ -75,3 +76,13 @@ li {
     border-bottom: 1px solid #000;
 }
 
+table {
+    background-color: #000;
+}
+table thead th {
+    color: #a52222;
+}
+table td,
+table li {
+    color: #e47419;
+}
