@@ -4,10 +4,16 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    background-color: var(--primary-color);
 }
 
-h1, h2, h3 {
+body {
+    background-color: var(--primary-color);
+    font-family: var(--secondary-font);
+}
+
+h1,
+h2,
+h3 {
     font-family: var(--primary-font);
     margin-bottom: 12px;
     letter-spacing: 1px;
@@ -16,7 +22,6 @@ h1, h2, h3 {
 p {
     font-family: var(--secondary-font);
     margin-bottom: 12px;
-
 }
 
 .main-content {
@@ -25,8 +30,8 @@ p {
     max-width: 950px;
     min-height: 100vh;
     margin: auto;
-
 }
+
 ol,
 li {
     list-style: none;
