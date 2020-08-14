@@ -1,0 +1,22 @@
+:root {
+    --svg-height: 120px;
+}
+footer {
+    border-top: 1px solid #000;
+    padding-top: 20px;
+    max-width: 950px;
+    margin: 0 auto;
+
+    p {
+        margin-bottom: var(--svg-height);
+    }
+
+    svg {
+        display: block;
+        height: var(--svg-height);
+    }
+
+    .cls-1 {
+        fill: #0b0a0b;
+    }
+}

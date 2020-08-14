@@ -16,19 +16,26 @@
             display: grid;
             grid-gap: 20px;
             grid-template-columns: repeat(2, 1fr);
+
+            textarea {
+                resize: none;
+              }
         }
 
         .input-wrapper {
             display: flex;
             flex-direction: column;
 
+
+            &.is-row{
+                flex-direction: row;
+            }
+
             &.form-newsletter {
                 grid-column-start: 1;
                 grid-column-end: 3;
 
                 .radio-button-wrapper {
-                    flex-direction: row;
-
                     input {
                         + span {
                             margin-left: 10px;
@@ -38,7 +45,6 @@
             }
 
             &.form-button {
-                flex-direction: row;
                 input {
                     width: 55px;
 
@@ -49,7 +55,6 @@
             }
 
             &.form-terms {
-                flex-direction: row;
                 grid-column-start: 1;
                 grid-column-end: 3;
                 align-items: center;
