@@ -4,15 +4,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="style/style.css">
     <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Source+Sans+Pro:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
     <link href="https://unpkg.com/pattern.css" rel="stylesheet">
     <title>Irene Lopez</title>
 </head>
 
 <body>
-    <section class="main-content">
-        <section class="navbar-wrapper">
+    <main class="main-content">
+        <header class="navbar-wrapper">
             <div class="logo"><a href="index.html">IL</a></div>
             <nav>
                 <ul>
@@ -23,24 +23,24 @@
                     <li><a href="contact.html">Contact me!</a></li>
                 </ul>
             </nav>
-        </section>
+        </header>
 
         <section>
             <a name="form"></a>
-            <form action="gracias.html" method="post" enctype="multipart/form-data">
+            <form action="gracias.html" method="post">
                 <fieldset>
                     <legend>Contact me!</legend>
-                    <label>Name</label>
+                    <label for="name">Name</label>
                     <input type="text" name="name" placeholder="Ire">
                     <br>
-                    <label>Surname</label>
-                    <input type="text" name="Surname" placeholder="Lopez">
+                    <label for="surname">Surname</label>
+                    <input type="text" name="surname" placeholder="Lopez">
                     <br>
-                    <label>Message</label>
-                    <textarea name="mensaje" placeholder="Hey Ire! I´m writting to you..."></textarea>
+                    <label for="message">Message</label>
+                    <textarea name="message" placeholder="Hey Ire! I´m writting to you..."></textarea>
                     <br>
-                    <label>Country</label>
-                    <select name="opciones_seleccion">
+                    <label for="opction-selection">Country</label>
+                    <select form="opction-selection" name="opction-selection">
                         <option selected="selected">I´m from</option>
                         <option value="1">Arg</option>
                         <option value="2">Mex</option>
@@ -49,22 +49,21 @@
                         <option value="4">Other</option>
                     </select>
                     <br>
-                    <label>Would you like to receive my newsletters?</label>
-                    <input type="radio" name="option" value="Si">Yes!
-                    <input type="radio" name="option" value="No">No :(
+                    <label for="newsletter">Would you like to receive my newsletters?</label>
+                    <input name="newsletter" type="radio" name="option" value="Si">Yes!
+                    <input name="newsletter" type="radio" name="option" value="No">No :(
                     <br>
                     <br>
-                    <input type="checkbox">
-                    <label>I´ve read and accept the <a href="Privacy">Terms and conditions</a></label>
+                    <input name="terms-and-conditions" type="checkbox">
+                    <label for="terms-and-conditions">I´ve read and accept the <a href="Privacy">Terms and conditions</a></label>
                     <br>
                     <input type="reset" value="Reset">
                     <input type="submit" name="button" value="Send">
-
                 </fieldset>
             </form>
         </section>
         <footer>
-            <!-- footer -->
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem, mollitia dolores reiciendis sint et magni?</p>
         </footer>
-    </section>
+    </main>
 </body>
