@@ -28,13 +28,6 @@ p {
     margin: auto;
 }
 
-ol,
-li {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    font-family: "Source Sans Pro", sans-serif;
-}
 
 .navbar-wrapper {
     display: flex;
@@ -61,22 +54,22 @@ li {
     color: #000;
 }
 
-.main-content .textAndImage {
+.main-content .text-and-image {
     margin-bottom: 50px;
 }
 
-.main-content .textAndImage .homeImg {
+.main-content .text-and-image .homeImg {
     width: 50%;
     position: relative;
 }
 
-.main-content .textAndImage .informationWrapper,
-.main-content .textAndImage p,
-.main-content .textAndImage h1 {
+.main-content .text-and-image .informationWrapper,
+.main-content .text-and-image p,
+.main-content .text-and-image h1 {
     background-color: #efe9e4;
 }
 
-.main-content .textAndImage h1 {
+.main-content .text-and-image h1 {
     border-bottom: 1px solid #000;
 }
 
@@ -84,10 +77,20 @@ table {
     background-color: #000;
     font-family: "Source Sans Pro", sans-serif;
 }
+
 table thead th {
     color: #a52222;
 }
+
 table td,
 table li {
     color: #e47419;
+}
+
+ol,
+li {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    font-family: "Source Sans Pro", sans-serif;
 }
