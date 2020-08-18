@@ -1,22 +1,59 @@
 :root {
     --svg-height: 120px;
 }
-footer {
-    border-top: 1px solid #000;
-    padding-top: 20px;
-    max-width: 950px;
-    margin: 0 auto;
 
-    p {
-        margin-bottom: var(--svg-height);
+footer {
+    background-color: #000;
+
+    .inner-footer {
+        max-width: 950px;
+        border-top: 1px solid #000;
+        padding-top: 20px;
+        margin: 0 auto;
+
+        h1 {
+            margin: 35px 0 60px 0;
+            color: #fff;
+            font-size: 25px;
+            font-family: var(--secondary-font);
+            letter-spacing: 2px;
+        }
+
+        p {
+            margin-bottom: var(--svg-height);
+        }
+
+        .mail-link {
+            text-decoration: none;
+            color: #fff;
+            position: relative;
+
+            &::before {
+                content: "";
+                left: 0;
+                top: 40px;
+                position: absolute;
+                width: 0;
+                height: 1px;
+                background-color: #fff;
+                transition: all 0.3s ease;
+            }
+        }
+
+        .mail-link:hover,
+        .mail-link:visited {
+            &::before {
+                width: 100%;
+            }
+        }
     }
 
     svg {
         display: block;
         height: var(--svg-height);
-    }
 
-    .cls-1 {
-        fill: #0b0a0b;
+        .cls-1 {
+            fill: rgb(239, 233, 228);
+        }
     }
 }
