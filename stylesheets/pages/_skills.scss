@@ -1,67 +1,42 @@
-// table {
-//     background-color: black;
-
-//     thead {
-//         th {
-//             color: #a52222;
-//         }
-//     }
-
-//     td,
-//     li {
-//         color: rgb(228, 116, 25);
-//     }
-// }
-
 .main-content {
     .skills-wrapper {
         display: flex;
-        flex-direction: column;
+        justify-content: space-evenly;
 
-        .skills-row {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
+        &.second-row {
+            margin-top: 50px;
+        }
+    }
+
+    .pie-chart-wrapper {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        p {
+            margin-bottom: 0;
         }
 
         .svg-wrapper {
-            max-width: 250px;
-            padding: 20px;
+            $dash-value: 400;
             position: relative;
+            transform: rotate(-90deg);
+            margin-bottom: 15px;
 
-            .percentage {
-                position: absolute;
-                content: "";
-                top: 50%;
-                transform: translate(-50%, -50%);
-                left: 50%;
-                color: #fff;
-                font-size: 20px;
-                margin-bottom: 0;
-            }
-
-            svg {
+            .pie-chart {
                 display: block;
+                height: $chart-size;
+                @include chart-animation($dash-value);
 
-                .cls-1 {
-                    fill: #a58172;
+                .pie-chart-center {
+                    fill: $chart-color;
                 }
 
-                .cls-2 {
-                    fill: none;
-                    stroke: #a55431;
-                    stroke-width: 1;
-                    stroke-dasharray: 750;
-                    animation: animate-path linear 2s;
-                }
-
-                @keyframes animate-path {
-                    0% {
-                        stroke-dashoffset: -300%;
-                    }
-
-                    100% {
-                        stroke-dashoffset: 0%;
-                    }
+                .pie-chart-border {
+                    stroke: $chart-color;
+                    stroke-dasharray: $dash-value;
+                    stroke-dashoffset: $dash-value;
+                    animation: dash 5s linear forwards;
                 }
             }
         }
