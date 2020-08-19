@@ -10,26 +10,30 @@ function setCursorPosition({ x, y }) {
     docStyles.setProperty("--mouseY", `${y}px`);
 }
 
-// Agrega el estilo cuando clickeas
-function setClickedStyle() {
-    cursor.classList.add("clicked");
-}
-
-// Remueve el estilo cuando levantas el cursor
-function removeClickedStyle() {
-    cursor.classList.remove("clicked");
-}
-
 // Los listeners
 function setCursorListeners() {
+    const span = document.querySelector(".custom-cursor span");
+
     document.addEventListener("pointermove", setCursorPosition);
-    document.addEventListener("pointerdown", setClickedStyle);
-    document.addEventListener("pointerup", removeClickedStyle);
+    document.addEventListener("pointerdown", ({ target }) => {
+        if (target.tagName !== "IMG") return;
+
+        cursor.classList.add("clicked");
+        span.innerText = target.alt;
+    });
+
+    document.addEventListener("pointerup", () => {
+        cursor.classList.remove("clicked");
+        span.innerText = "";
+    });
 }
 
 // Esta funcion crea el cursor y setea los listeners
 function createCursor() {
     cursor = document.createElement("div");
+    span = document.createElement("span");
+    title = document.queryCommandValue("h1");
+    cursor.append(span);
     cursor.classList.add("custom-cursor");
     document.body.append(cursor);
     setCursorListeners();
