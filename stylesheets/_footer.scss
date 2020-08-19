@@ -10,17 +10,50 @@ footer {
         border-top: 1px solid #000;
         padding-top: 20px;
         margin: 0 auto;
-
+        margin-bottom: 100px;
         h1 {
-            margin: 35px 0 60px 0;
+            margin: 35px 0;
             color: #fff;
             font-size: 25px;
             font-family: var(--secondary-font);
             letter-spacing: 2px;
         }
 
+        .footer-information {
+            display: flex;
+            align-items: center;
+            padding: 15px 0;
+
+            .footer-icons-wrapper {
+                display: flex;
+                align-items: center;
+
+                a {
+                    color: white;
+                    padding: 20px;
+                    width: 20px;
+
+                    + a {
+                        margin-left: 15px;
+                    }
+
+                    i{
+                        font-size: 25px;
+                    }
+
+                    &:visited {
+                        color: white;
+                    }
+                }
+            }
+        }
+
         p {
-            margin-bottom: var(--svg-height);
+            color: white;
+            letter-spacing: 2px;
+            font-size: 20px;
+            margin-bottom: 0;
+            margin-right: 25px;
         }
 
         .mail-link {
@@ -29,7 +62,7 @@ footer {
             position: relative;
 
             &::before {
-                @include underlineElement(#FFF);
+                @include underlineElement(#fff);
             }
         }
 
