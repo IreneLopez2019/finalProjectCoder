@@ -1,4 +1,4 @@
-:root{
+:root {
     --navbar-height: 120px;
 }
 
@@ -20,17 +20,34 @@
         display: flex;
 
         li {
+            position: relative;
+
+            &::before {
+                @include underlineElement();
+            }
+
             + li {
                 margin-left: 15px;
             }
         }
-    }
-    a {
-        text-decoration: none;
-        color: black;
-        &:hover {
+
+        li:hover {
+            color: black;
+
+            &::before {
+                transform-origin: left;
+                transform: scale(1);
+            }
+        }
+
+        li:visited{
             color: black;
         }
+    }
+
+    a {
+        text-decoration: none;
+
         &:visited {
             color: black;
         }
