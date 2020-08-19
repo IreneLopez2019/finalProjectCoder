@@ -40,6 +40,11 @@ footer {
 
                     i {
                         font-size: 25px;
+                        height: 30px;
+
+                        &:hover {
+                            font-size: 28px;
+                        }
                     }
 
                     &:visited {
