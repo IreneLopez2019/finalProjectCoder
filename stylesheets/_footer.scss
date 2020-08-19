@@ -1,5 +1,5 @@
 :root {
-    --svg-height: 120px;
+    --svg-height: 100px;
 }
 
 footer {
@@ -10,7 +10,8 @@ footer {
         border-top: 1px solid #000;
         padding-top: 20px;
         margin: 0 auto;
-        margin-bottom: 100px;
+        margin-bottom: 80px;
+
         h1 {
             margin: 35px 0;
             color: #fff;
@@ -37,7 +38,7 @@ footer {
                         margin-left: 15px;
                     }
 
-                    i{
+                    i {
                         font-size: 25px;
                     }
 
