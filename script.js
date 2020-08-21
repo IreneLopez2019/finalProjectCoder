@@ -12,24 +12,33 @@ function setCursorPosition({ x, y }) {
 
 // Los listeners
 function setCursorListeners() {
-    const span = document.querySelector(".custom-cursor span");
-
     document.addEventListener("pointermove", setCursorPosition);
-    document.addEventListener("pointerdown", (e) => {
-        setPointerContent(e.target.tagName);
-        // span.innerText = target.;
+    document.addEventListener("pointermove" , (e) => {
+        if (isDescendantOfFooter(e.target)) {
+            setPointerContent("FOOTER");
+        } else {
+            setPointerContent(e.target.tagName);
+        }
+
+        console.log(isDescendantOfFooter(tag));
     });
 
     document.addEventListener("pointerup", () => {
         cursor.classList = "custom-cursor";
-        // span.innerText = "";
     });
+}
+
+function isDescendantOfFooter(child) {
+    let footer = document.querySelector("footer");
+
+    if (child === footer || footer.contains(child)) return "FOOTER";
+    return false;
 }
 
 // Esta funcion crea el cursor y setea los listeners
 function createCursor() {
     cursor = document.createElement("div");
-    cursor = document.createElement("img");
+    cursor = document.createElement("div");
     span = document.createElement("span");
     title = document.queryCommandValue("h1");
     cursor.append(span);
@@ -39,20 +48,38 @@ function createCursor() {
 }
 
 function setPointerContent(tag) {
-    const supportedTags = ["IMG", "P", "A"];
+    const supportedTags = ["IMG", "P", "NAV", "FOOTER"];
 
     switch (tag) {
-        case (tag = supportedTags[0]):
-            cursor.classList.add("is-image");
+        case supportedTags[0]:
+            cursor.classList.add(
+                "custom-cursor",
+                "color-black",
+                "image-carousel"
+            );
             break;
-        case (tag = supportedTags[1]):
+
+        case supportedTags[1]:
             cursor.classList.add("is-paragraph");
             break;
-        case (tag = supportedTags[2]):
-            cursor.classList.add("is-item");
+
+        case supportedTags[2]:
+            cursor.classList.add("color-indigo", "image-white");
+            break;
+
+        case supportedTags[3]:
+            cursor.classList = "custom-cursor image-white color-blue";
+
             break;
         default:
-            console.log("No es ninguna de las etiquetas soportadas");
+            cursor.classList.remove(
+                "color-black",
+                "image-carousel",
+                "is-paragraph",
+                "color-indigo",
+                "color-blue",
+                "image-white"
+            );
             break;
     }
 }
