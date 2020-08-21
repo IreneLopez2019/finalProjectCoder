@@ -1,0 +1,52 @@
+.custom-cursor {
+    position: fixed;
+    top: 0;
+    left: 0;
+    transform: translate3d(var(--mouseX, 0), var(--mouseY, 0), 0);
+
+    width: 60px;
+    height: 60px;
+    padding: 30px;
+    background-color: rgba(255, 128, 0, 0.44);
+    border: 2px solid rgba(179, 89, 0, 0.439);
+    border-radius: 50%;
+    pointer-events: none;
+
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    // chivito
+    background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg height='40px' width='40px' fill='%23000' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' version='1.1' x='0px' y='0px' viewBox='0 0 100 100' enable-background='new 0 0 100 100' xml:space='preserve'%3E%3Cpath d='M88%2C34.8V31h-3.8v3.8v3.801v3.8h-3.8H76.6h-3.8H69h-3.8h-3.8H57.6h-3.8H50h-3.8h-3.8v-3.8V34.8V31v-3.8h3.8H50v-3.8h-3.8 v-3.8h-3.8h-3.8V15.8h3.8V12h3.8V8.2H50h3.8V12h3.8v3.8H61.4V12V8.2H57.6V4.4h-3.8H50h-3.8h-3.8h-3.8v3.8h-3.8V12H31v3.8h-3.8v3.801 h-3.8h-3.8h-3.8H12H8.2v3.8v3.8V31H12v3.8h3.8h3.8h3.8h3.8v3.801v3.8v3.8V50v3.8v3.8V61.4v3.8V69v3.8H31v3.8V80.4v3.8V88v3.8v3.8 h3.8h3.8h3.8v-3.8V88v-3.8v-3.8V76.6h3.8H50h3.8h3.8H61.4h3.8H69h3.8h3.8V80.4v3.8V88v3.8v3.8H80.4h3.8H88v-3.8V88v-3.8v-3.8V76.6 v-3.8V69v-3.8v-3.8V57.6v-3.8V50v-3.8h3.8v-3.8v-3.8V34.8H88z M27.2%2C23.4H31v3.8h-3.8h-3.8v-3.8H27.2z'%3E%3C/path%3E%3Crect x='61.4' y='15.8' width='3.8' height='3.801'%3E%3C/rect%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: center;
+
+}
+
+//background-color
+
+.color-black {
+    background-color: rgba(rgb(0, 0, 0), 0.5);
+    border-color: rgb(0, 19, 32);
+}
+
+.color-indigo {
+    background-color: rgba(rgb(46, 0, 78), 0.5);
+    border-color: rgb(rgb(130, 56, 184), 0.25);
+}
+
+.color-blue {
+    background-color: rgba(rgb(0, 131, 218), 0.25);
+    border-color: rgb(3, 72, 119);
+}
+
+//background-color del chivito
+
+.image-white {
+    background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg height='40px' width='40px' fill='%23FFF' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' version='1.1' x='0px' y='0px' viewBox='0 0 100 100' enable-background='new 0 0 100 100' xml:space='preserve'%3E%3Cpath d='M88%2C34.8V31h-3.8v3.8v3.801v3.8h-3.8H76.6h-3.8H69h-3.8h-3.8H57.6h-3.8H50h-3.8h-3.8v-3.8V34.8V31v-3.8h3.8H50v-3.8h-3.8 v-3.8h-3.8h-3.8V15.8h3.8V12h3.8V8.2H50h3.8V12h3.8v3.8H61.4V12V8.2H57.6V4.4h-3.8H50h-3.8h-3.8h-3.8v3.8h-3.8V12H31v3.8h-3.8v3.801 h-3.8h-3.8h-3.8H12H8.2v3.8v3.8V31H12v3.8h3.8h3.8h3.8h3.8v3.801v3.8v3.8V50v3.8v3.8V61.4v3.8V69v3.8H31v3.8V80.4v3.8V88v3.8v3.8 h3.8h3.8h3.8v-3.8V88v-3.8v-3.8V76.6h3.8H50h3.8h3.8H61.4h3.8H69h3.8h3.8V80.4v3.8V88v3.8v3.8H80.4h3.8H88v-3.8V88v-3.8v-3.8V76.6 v-3.8V69v-3.8v-3.8V57.6v-3.8V50v-3.8h3.8v-3.8v-3.8V34.8H88z M27.2%2C23.4H31v3.8h-3.8h-3.8v-3.8H27.2z'%3E%3C/path%3E%3Crect x='61.4' y='15.8' width='3.8' height='3.801'%3E%3C/rect%3E%3C/svg%3E");
+}
+
+.image-carousel {
+    background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg height='40px' width='40px' fill='%23fff' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' version='1.1' x='0px' y='0px' viewBox='206 206 100 100' enable-background='new 206 206 100 100' xml:space='preserve'%3E%3Cg%3E%3Cpath d='M290.582%2C214.5h-6.916h-6.917h-6.917h-6.916h-6.917h-6.917h-6.917h-6.917h-6.917h-6.917h-6.917v6.917v6.917v6.917v6.917 v6.917V256v6.917v6.916v6.917v6.916v6.917v6.917h6.917h6.917h6.917h6.917h6.917h6.917h6.917h6.916h6.917h6.917h6.916h6.917v-6.917 v-6.917v-6.916v-6.917v-6.916V256v-6.917v-6.917v-6.917v-6.917v-6.917V214.5H290.582z M290.582%2C228.333v6.917v6.917v6.917V256 v6.917v6.916v6.917v6.916v6.917h-6.916v-6.917h-6.917v6.917h-6.917h-6.916v-6.917h-6.917v6.917h-6.917h-6.917h-6.917h-6.917h-6.917 v-6.917h6.917v-6.916h-6.917v-6.917v-6.916h6.917V256h-6.917v-6.917v-6.917v-6.917v-6.917v-6.917h6.917h6.917h6.917h6.917h6.917 h6.917h6.916h6.917h6.917h6.916V228.333L290.582%2C228.333z'%3E%3C/path%3E%3Cpolygon points='276.749%2C235.25 276.749%2C228.333 269.832%2C228.333 262.916%2C228.333 262.916%2C235.25 269.832%2C235.25 '%3E%3C/polygon%3E%3Cpolygon points='262.916%2C249.083 262.916%2C256 269.832%2C256 276.749%2C256 276.749%2C249.083 269.832%2C249.083 '%3E%3C/polygon%3E%3Cpolygon points='262.916%2C235.25 255.999%2C235.25 255.999%2C242.166 255.999%2C249.083 262.916%2C249.083 262.916%2C242.166 '%3E%3C/polygon%3E%3Cpolygon points='276.749%2C242.166 276.749%2C249.083 283.666%2C249.083 283.666%2C242.166 283.666%2C235.25 276.749%2C235.25 '%3E%3C/polygon%3E%3Crect x='249.083' y='276.75' width='6.917' height='6.916'%3E%3C/rect%3E%3Crect x='242.166' y='269.833' width='6.917' height='6.917'%3E%3C/rect%3E%3Crect x='235.249' y='262.917' width='6.917' height='6.916'%3E%3C/rect%3E%3Crect x='228.333' y='269.833' width='6.917' height='6.917'%3E%3C/rect%3E%3Crect x='269.832' y='276.75' width='6.917' height='6.916'%3E%3C/rect%3E%3Crect x='262.916' y='269.833' width='6.916' height='6.917'%3E%3C/rect%3E%3Crect x='255.999' y='262.917' width='6.917' height='6.916'%3E%3C/rect%3E%3Crect x='249.083' y='256' width='6.917' height='6.917'%3E%3C/rect%3E%3Crect x='242.166' y='249.083' width='6.917' height='6.917'%3E%3C/rect%3E%3Crect x='235.249' y='242.166' width='6.917' height='6.917'%3E%3C/rect%3E%3Crect x='228.333' y='249.083' width='6.917' height='6.917'%3E%3C/rect%3E%3C/g%3E%3C/svg%3E");
+}
