@@ -10,22 +10,43 @@ function setCursorPosition({ x, y }) {
     docStyles.setProperty("--mouseY", `${y}px`);
 }
 
+function setTag({ target }) {
+    const tag = isDescendantOfFooter(target) ? "FOOTER" : target.tagName;
+    setPointerContent(tag);
+}
+
+function restartCustomCursor() {
+    cursor.classList = "custom-cursor";
+}
+
 // Los listeners
 function setCursorListeners() {
-    document.addEventListener("pointermove", setCursorPosition);
-    document.addEventListener("pointermove" , (e) => {
-        if (isDescendantOfFooter(e.target)) {
-            setPointerContent("FOOTER");
-        } else {
-            setPointerContent(e.target.tagName);
-        }
+    const events = [
+        {
+            name: "pointerdown",
+            callbacks: setCursorPosition,
+        },
+        {
+            name: "pointerup",
+            callbacks: restartCustomCursor,
+        },
+        {
+            name: "pointermove",
+            callbacks: [setCursorPosition, setTag],
+        },
+    ];
 
-        console.log(isDescendantOfFooter(tag));
-    });
+    for (let event of events) {
+        const { name, callbacks } = event;
 
-    document.addEventListener("pointerup", () => {
-        cursor.classList = "custom-cursor";
-    });
+        document.addEventListener(name, (e) => {
+            if (callbacks.length) {
+                for (let callback of callbacks) callback(e);
+            } else {
+                callbacks(e);
+            }
+        });
+    }
 }
 
 function isDescendantOfFooter(child) {
@@ -41,7 +62,6 @@ function createCursor() {
     cursor = document.createElement("div");
     span = document.createElement("span");
     title = document.queryCommandValue("h1");
-    cursor.append(span);
     cursor.classList.add("custom-cursor");
     document.body.append(cursor);
     setCursorListeners();
@@ -57,30 +77,32 @@ function setPointerContent(tag) {
                 "color-black",
                 "image-carousel"
             );
-            break;
+        break;
 
         case supportedTags[1]:
             cursor.classList.add("is-paragraph");
-            break;
+        break;
 
         case supportedTags[2]:
             cursor.classList.add("color-indigo", "image-white");
+            cursor.classList = "custom-cursor image-white color-black";
             break;
 
         case supportedTags[3]:
             cursor.classList = "custom-cursor image-white color-blue";
+            cursor.classList.remove("color-default")
 
-            break;
+        break;
         default:
+            cursor.classList = "custom-cursor color-dafault";
             cursor.classList.remove(
                 "color-black",
                 "image-carousel",
-                "is-paragraph",
                 "color-indigo",
                 "color-blue",
                 "image-white"
             );
-            break;
+        break;
     }
 }
 
