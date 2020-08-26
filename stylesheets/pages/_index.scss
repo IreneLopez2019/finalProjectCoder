@@ -1,0 +1,80 @@
+.main-content {
+    .textAndImage {
+        height: calc(100vh - var(--navbar-height));
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .grid-wrapper {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            grid-template-rows: repeat(6, 100px);
+            justify-items: center;
+
+            h1,
+            p {
+                position: relative;
+
+                &::before {
+                    content: "";
+                    position: absolute;
+                    bottom: -6px;
+                    width: 100%;
+                    height: 1px;
+                    background-color: #000;
+                }
+            }
+        }
+    }
+
+    .homeImg {
+        max-width: 450px;
+        grid-column-start: 1;
+        grid-column-end: 4;
+        grid-row-start: 1;
+        grid-row-end: 5;
+    }
+
+    .informationWrapper {
+        width: 425px;
+        max-height: 210px;
+        overflow-y: auto;
+        padding: 20px;
+        background-color: #fff;
+        grid-column-start: 3;
+        grid-column-end: 7;
+        grid-row-start: 3;
+        grid-row-end: 7;
+
+        .icons-wrapper {
+            display: flex;
+            align-items: center;
+            margin-top: 15px;
+
+            div {
+                height: 10px;
+                width: 10px;
+
+                + div {
+                    margin-left: 15px;
+                }
+            }
+        }
+    }
+
+    .pattern {
+        width: 351px;
+        height: 201px;
+        background-color: transparent;
+        grid-column-start: 3;
+        grid-column-end: 5;
+        grid-row-start: 2;
+        grid-row-end: 5;
+    }
+
+    .personal-information-wrapper{
+        .personal-information-description{
+            margin-bottom: 60px;
+        }
+    }
+}

@@ -1,0 +1,41 @@
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--primary-color);
+    font-family: var(--secondary-font);
+}
+
+h1,
+h2,
+h3 {
+    font-family: var(--primary-font);
+    margin-bottom: 12px;
+    letter-spacing: 1px;
+}
+
+p {
+    font-family: var(--secondary-font);
+    margin-bottom: 12px;
+    user-select: none;
+}
+
+.main-content {
+    width: 100%;
+    height: 100%;
+    max-width: 950px;
+    min-height: 100vh;
+    margin: auto;
+}
+
+ol,
+li {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}

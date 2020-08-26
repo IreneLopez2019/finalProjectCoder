@@ -1,0 +1,55 @@
+:root {
+    --navbar-height: 120px;
+}
+
+.navbar-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: var(--secondary-font);
+    padding: 0 60px;
+    height: var(--navbar-height);
+
+    .logo {
+        font-size: 30px;
+        letter-spacing: 2px;
+        font-family: var(--primary-font);
+    }
+
+    ul {
+        display: flex;
+
+        li {
+            position: relative;
+
+            &::before {
+                @include underlineElement();
+            }
+
+            + li {
+                margin-left: 15px;
+            }
+        }
+
+        li:hover {
+            color: black;
+
+            &::before {
+                transform-origin: left;
+                transform: scale(1);
+            }
+        }
+
+        li:visited{
+            color: black;
+        }
+    }
+
+    a {
+        text-decoration: none;
+
+        &:visited {
+            color: black;
+        }
+    }
+}

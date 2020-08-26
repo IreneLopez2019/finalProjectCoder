@@ -1,0 +1,44 @@
+.main-content {
+    .skills-wrapper {
+        display: flex;
+        justify-content: space-evenly;
+
+        &.second-row {
+            margin-top: 50px;
+        }
+    }
+
+    .pie-chart-wrapper {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        p {
+            margin-bottom: 0;
+        }
+
+        .svg-wrapper {
+            $dash-value: 400;
+            position: relative;
+            transform: rotate(-90deg);
+            margin-bottom: 15px;
+
+            .pie-chart {
+                display: block;
+                height: $chart-size;
+                @include chart-animation($dash-value);
+
+                .pie-chart-center {
+                    fill: $chart-color;
+                }
+
+                .pie-chart-border {
+                    stroke: $chart-color;
+                    stroke-dasharray: $dash-value;
+                    stroke-dashoffset: $dash-value;
+                    animation: dash 5s linear forwards;
+                }
+            }
+        }
+    }
+}
