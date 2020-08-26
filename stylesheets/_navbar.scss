@@ -21,11 +21,6 @@
 
         li {
             position: relative;
-
-            &::before {
-                @include underlineElement();
-            }
-
             + li {
                 margin-left: 15px;
             }

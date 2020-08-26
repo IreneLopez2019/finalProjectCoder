@@ -66,10 +66,6 @@ footer {
             text-decoration: none;
             color: #fff;
             position: relative;
-
-            &::before {
-                @include underlineElement(#fff);
-            }
         }
 
         .mail-link:hover,
