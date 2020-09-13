@@ -19,15 +19,14 @@
 
             textarea {
                 resize: none;
-              }
+            }
         }
 
         .input-wrapper {
             display: flex;
             flex-direction: column;
 
-
-            &.is-row{
+            &.is-row {
                 flex-direction: row;
             }
 
@@ -67,6 +66,9 @@
             }
         }
 
+        label {
+            margin-bottom: 10px;
+        }
         .circle-form {
             grid-column-start: 6;
             grid-column-end: 8;

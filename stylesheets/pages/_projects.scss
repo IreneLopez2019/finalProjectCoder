@@ -1,17 +1,17 @@
-
 .portfolio-wrapper {
     display: grid;
     grid-gap: 5px;
     max-width: 950px;
     grid-template-columns: repeat(5, 1fr);
     grid-template-rows: repeat(7, 130px);
-
+    margin-bottom: 100px;
     img {
         width: 100%;
         height: 100%;
         object-fit: cover;
         object-position: center;
     }
+
     > :first-child {
         grid-column-start: 1;
         grid-column-end: 6;

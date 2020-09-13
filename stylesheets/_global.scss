@@ -11,9 +11,9 @@ html {
 }
 
 body {
-    background-color: var(--primary-color) !important;
-    font-family: var(--secondary-font) !important;
-    line-height: 1.1 !important;
+    background-color: var(--primary-color);
+    font-family: var(--secondary-font);
+    line-height: 1.1 ;
 }
 
 h1,
@@ -21,12 +21,12 @@ h2,
 h3 {
     font-family: var(--primary-font);
     margin-bottom: 12px;
-    letter-spacing: 1px;
+    letter-spacing: 1.5px;
 }
 
 p {
     font-family: var(--secondary-font);
-    margin-bottom: 12px !important;
+    margin-bottom: 12px;
     user-select: none;
 }
 
