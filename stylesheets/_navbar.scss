@@ -10,6 +10,9 @@
     padding: 0 60px;
     height: var(--navbar-height);
 
+    @media #{$mobile-only} {
+        padding: 0 30px;
+    }
     .logo {
         font-size: 30px;
         letter-spacing: 2px;
