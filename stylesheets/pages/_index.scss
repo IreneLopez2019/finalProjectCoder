@@ -27,6 +27,7 @@
                 position: relative;
                 margin-bottom: 20px;
                 line-height: 22px;
+
                 &::before {
                     content: "";
                     position: absolute;
@@ -51,7 +52,7 @@
         grid-row-end: 5;
 
         @media #{$mobile-only} {
-            max-width: 330px;
+            max-width: 300px;
         }
         img {
             width: 100%;
@@ -76,13 +77,18 @@
         @media #{$mobile-only} {
             position: relative;
             bottom: 100px;
-            right: 50px;
-            max-width: 320px;
+            right: 20px;
+            max-width: 300px;
+            padding: 15px;
         }
 
         .icons-wrapper {
             display: flex;
             align-items: center;
+
+            @media #{$mobile-only} {
+                margin-bottom: 6px;
+            }
 
             div {
                 height: 10px;
