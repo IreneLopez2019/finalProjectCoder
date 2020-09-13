@@ -12,6 +12,10 @@ footer {
         margin: 0 auto;
         margin-bottom: 80px;
 
+        @media #{$mobile-only} {
+            margin: 50px;
+        }
+
         h1 {
             margin: 35px 0;
             color: #fff;

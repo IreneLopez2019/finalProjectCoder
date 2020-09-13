@@ -1,0 +1,29 @@
+// Main switch
+// -------------------------
+
+$mobile-only: "(max-width: 799px)";
+$desktop-only: "(min-width: 800px)";
+
+
+// Mobile breakpoints
+// -------------------------
+
+$break-sm: "(min-width: 576px)";
+$break-md: "(min-width: 768px)";
+$break-sm-by-max: "(max-width: 550px)";
+
+
+// Desktop breakpoints
+// -------------------------
+
+$break-lg: "(min-width: 992px)";
+$break-xl: "(min-width: 1200px)";
+
+// Custom breakpoints
+$tablet: "(min-width: 800px) and (max-width: 991px)";
+$laptop: "(min-width: 800px) and (max-width: 1199px)";
+
+// Height breakpoints
+$height-only-sm: "(max-height: 700px)";
+$height-sm: "(max-height: 600px) and (min-width: 800px)";
+$height-md: "(max-height: 850px) and (min-width: 800px)";
