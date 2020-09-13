@@ -5,6 +5,10 @@
 footer {
     background-color: #000;
 
+    @media #{$mobile-only} {
+        margin: none;
+    }
+
     .inner-footer {
         max-width: 950px;
         border-top: 1px solid #000;
@@ -22,54 +26,19 @@ footer {
             font-size: 25px;
             font-family: var(--secondary-font);
             letter-spacing: 2px;
-        }
 
-        .footer-information {
-            display: flex;
-            align-items: center;
-            padding: 15px 0;
-
-            .footer-icons-wrapper {
-                display: flex;
-                align-items: center;
-
-                a {
-                    color: white;
-                    padding: 20px;
-                    width: 20px;
-
-                    + a {
-                        margin-left: 15px;
-                    }
-
-                    i {
-                        font-size: 25px;
-                        height: 30px;
-
-                        &:hover {
-                            font-size: 28px;
-                        }
-                    }
-
-                    &:visited {
-                        color: white;
-                    }
-                }
+            @media #{$mobile-only} {
+                font-size: 18px;
             }
         }
-
-        p {
-            color: white;
-            letter-spacing: 2px;
-            font-size: 20px;
-            margin-bottom: 0;
-            margin-right: 25px;
-        }
-
         .mail-link {
             text-decoration: none;
             color: #fff;
             position: relative;
+
+            @media #{$mobile-only} {
+                font-size: 18px;
+            }
 
             &::before {
                 content: "";
@@ -91,6 +60,61 @@ footer {
                 transform-origin: left;
                 transform: scale(1);
             }
+        }
+    }
+
+    .footer-information {
+        display: flex;
+        align-items: center;
+        padding: 15px 0;
+
+        @media #{$mobile-only} {
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
+        .footer-icons-wrapper {
+            display: flex;
+            align-items: center;
+
+            a {
+                color: white;
+                padding: 20px;
+                width: 20px;
+                @media #{$mobile-only} {
+                    margin-left: 0;
+                    padding: 20px 0;
+                }
+                + a {
+                    margin-left: 15px;
+
+                }
+
+                i {
+                    font-size: 25px;
+                    height: 30px;
+
+                    &:hover {
+                        font-size: 28px;
+                    }
+                }
+
+                &:visited {
+                    color: white;
+                }
+            }
+        }
+    }
+
+    p {
+        color: white;
+        letter-spacing: 2px;
+        font-size: 20px;
+        margin-bottom: 0;
+        margin-right: 25px;
+
+        @media #{$mobile-only} {
+            margin-right: 0;
         }
     }
 
