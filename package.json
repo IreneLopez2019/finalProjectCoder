@@ -1,0 +1,28 @@
+{
+    "name": "finalprojectcoder",
+    "version": "1.0.0",
+    "description": "proyecto final CoderHouse",
+    "main": "index.html",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "build-css": "node-sass --include-path scss style.scss style.css",
+        "prewatch-css": "npm install",
+        "watch-css": "nodemon -e scss -x \"npm run build-css\"",
+        "watch-css-alternative": "sass style.scss style.css --watch --style=compressed --no-source-map"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/IreneLopez2019/finalProjectCoder.git"
+    },
+    "author": "Irene Lopez",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/IreneLopez2019/finalProjectCoder/issues"
+    },
+    "homepage": "https://github.com/IreneLopez2019/finalProjectCoder#readme",
+    "devDependencies": {
+        "node-sass": "^4.14.1",
+        "nodemon": "^2.0.4",
+        "sass": "^1.26.10"
+    }
+}
