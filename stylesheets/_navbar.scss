@@ -28,6 +28,7 @@
 
         li {
             position: relative;
+            color: black;
 
             &::before {
                 content: "";
@@ -56,8 +57,9 @@
             }
         }
 
-        li:visited {
+        li:focus, li:visited {
             color: black;
+            outline: none;
         }
     }
 
