@@ -25,7 +25,9 @@
         @media #{$mobile-only} {
             margin: 0;
         }
-
+        a {
+            color: black;
+        }
         li {
             position: relative;
             color: black;
@@ -57,7 +59,8 @@
             }
         }
 
-        li:focus, li:visited {
+        li:focus,
+        a:visited {
             color: black;
             outline: none;
         }

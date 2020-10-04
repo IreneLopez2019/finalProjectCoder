@@ -31,6 +31,7 @@
                 width: 300px;
                 display: flex;
                 flex-direction: column;
+                margin-bottom: 20px;
             }
         }
 
@@ -47,7 +48,10 @@
                 grid-column-end: 3;
 
                 .radio-button-wrapper {
-                    input {
+                    div + div {
+                        margin-top: 15px;
+                    }
+                    input { 
                         + span {
                             margin-left: 10px;
                         }
@@ -57,15 +61,15 @@
 
             &.form-button {
                 input {
-                    width: 55px;
-                    background-color: black;
+                    width: 70px;
+                    background-color: rgb(70, 70, 70);
                     color: white;
                     border: none;
                     padding: 10px;
                     border-radius: 3px;
 
                     &.is-reset-button {
-                        background-color: #790e0e;
+                        background-color: #b63737;
                     }
                     + input {
                         margin-left: 20px;
