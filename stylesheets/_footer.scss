@@ -88,6 +88,9 @@ footer {
                 + a {
                     margin-left: 15px;
 
+                    @media #{$mobile-only} {
+                        margin-left: 30px;
+                    }
                 }
 
                 i {
@@ -122,6 +125,9 @@ footer {
         display: block;
         height: var(--svg-height);
 
+        @media #{$mobile-only} {
+            height: auto;
+        }
         .cls-1 {
             fill: rgb(239, 233, 228);
         }

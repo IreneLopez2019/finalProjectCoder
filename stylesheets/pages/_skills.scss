@@ -44,11 +44,19 @@
                 @include chart-animation($dash-value);
 
                 .pie-chart-center {
-                    fill: $chart-color;
+                    fill: #261300;
+
+                    &.is-ps {
+                        fill: #001e36;
+                    }
                 }
 
                 .pie-chart-border {
-                    stroke: $chart-color;
+                    stroke: #ff7c00;
+
+                    &.is-ps {
+                        stroke: #31a8ff;
+                    }
                     stroke-dasharray: $dash-value;
                     stroke-dashoffset: $dash-value;
                     animation: dash 5s linear forwards;
