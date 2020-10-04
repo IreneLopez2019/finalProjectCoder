@@ -1,24 +1,43 @@
 .main-content {
     min-height: 100%;
+    margin-bottom: var(--navbar-height);
+
     .skills-text {
         margin: 50px 0;
-        font-size: 18px;
+        font-size: 16px;
         line-height: 21px;
+        background-color: white;
+        padding: 20px;
+
+        @media #{$mobile-only} {
+            max-width: 320px;
+            margin: 30px;
+        }
     }
+
     .skills-wrapper {
         display: flex;
         flex-direction: column;
         justify-content: space-evenly;
         margin-bottom: 70px;
 
+        @media #{$mobile-only} {
+            margin: 50px;
+        }
+
         h1 {
             text-transform: uppercase;
             font-family: var(--secondary-font);
             margin-bottom: 50px;
         }
+
         .chart-wrapper {
             display: flex;
             justify-content: space-between;
+
+            @media #{$mobile-only} {
+                flex-direction: column;
+            }
         }
     }
 
@@ -26,7 +45,9 @@
         display: flex;
         flex-direction: column;
         align-items: center;
-
+        @media #{$mobile-only} {
+            margin-bottom: 60px;
+        }
         p {
             margin-bottom: 0;
             font-weight: 600;
@@ -44,19 +65,11 @@
                 @include chart-animation($dash-value);
 
                 .pie-chart-center {
-                    fill: #261300;
-
-                    &.is-ps {
-                        fill: #001e36;
-                    }
+                    fill: #181f3b;
                 }
 
                 .pie-chart-border {
-                    stroke: #ff7c00;
-
-                    &.is-ps {
-                        stroke: #31a8ff;
-                    }
+                    stroke: #100823;
                     stroke-dasharray: $dash-value;
                     stroke-dashoffset: $dash-value;
                     animation: dash 5s linear forwards;

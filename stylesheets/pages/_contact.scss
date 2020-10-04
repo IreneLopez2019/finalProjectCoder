@@ -1,4 +1,6 @@
 .main-content {
+    min-height: 100%;
+
     .form-wrapper {
         display: grid;
         grid-template-columns: repeat(8, 1fr);
@@ -7,6 +9,7 @@
         @media #{$mobile-only} {
             margin: 0 25px;
         }
+
         form {
             padding: 25px;
             width: 100%;
@@ -22,6 +25,12 @@
 
             textarea {
                 resize: none;
+            }
+
+            @media #{$mobile-only} {
+                width: 300px;
+                display: flex;
+                flex-direction: column;
             }
         }
 
@@ -49,7 +58,15 @@
             &.form-button {
                 input {
                     width: 55px;
+                    background-color: black;
+                    color: white;
+                    border: none;
+                    padding: 10px;
+                    border-radius: 3px;
 
+                    &.is-reset-button {
+                        background-color: #790e0e;
+                    }
                     + input {
                         margin-left: 20px;
                     }
@@ -71,6 +88,20 @@
 
         label {
             margin-bottom: 10px;
+            position: relative;
+            z-index: 90;
+        }
+        .is-highlighted {
+            &::after {
+                position: absolute;
+                content: "";
+                background-color: #aca59f50;
+                width: 45%;
+                height: 9px;
+                bottom: -2px;
+                left: 0;
+                right: 0;
+            }
         }
         .circle-form {
             grid-column-start: 6;
@@ -81,6 +112,10 @@
             svg {
                 width: 100%;
             }
+
+            @media #{$mobile-only} {
+                display: none;
+            }
         }
 
         .pattern {
@@ -90,6 +125,13 @@
             grid-column-end: 9;
             grid-row-start: 3;
             grid-row-end: 5;
+
+            @media #{$mobile-only} {
+                grid-row-start: 3;
+                grid-row-end: 4;
+                z-index: -1;
+                position: relative;
+            }
         }
     }
 }

@@ -13,7 +13,7 @@ html {
 body {
     background-color: var(--primary-color);
     font-family: var(--secondary-font);
-    line-height: 1.1 ;
+    line-height: 1.1;
 }
 
 h1,
@@ -36,6 +36,11 @@ p {
     max-width: 950px;
     min-height: 100vh;
     margin: auto;
+
+    // @media #{$mobile-only} {
+    //     margin-left:25px;
+    //     margin-right:25px;
+    // }
 }
 
 ol,
