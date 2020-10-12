@@ -19,14 +19,21 @@
             src="https://kit.fontawesome.com/d6dbae313b.js"
             crossorigin="anonymous"
         ></script>
+        <link
+        href="https://unpkg.com/aos@2.3.1/dist/aos.css"
+        rel="stylesheet"
+    />
+        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
         <link rel="stylesheet" href="style.css" />
     </head>
 
     <body>
         <section class="main-content">
             <section class="navbar-wrapper">
-                <div class="logo"><a href="index.html">IL</a></div>
-                <nav>
+                <div class="logo" data-aos="fade-right">
+                    <a href="index.html">IL</a>
+                </div>
+                <nav data-aos="fade-left">
                     <ul>
                         <li><a href="skills.html">Skills</a></li>
                         <li><a href="projects.html">Projects</a></li>
@@ -43,7 +50,7 @@
             </p>
 
             <H1 class="section-title">My skills</H1>
-            <section class="skills-wrapper">
+            <section class="skills-wrapper" data-aos="fade-up">
                 <h1>Web Development</h1>
                 <div class="chart-wrapper">
                     <div class="pie-chart-wrapper">
@@ -123,7 +130,7 @@
                 </div>
             </section>
 
-            <section class="skills-wrapper">
+            <section class="skills-wrapper" data-aos="fade-up">
                 <h1>Design</h1>
                 <div class="chart-wrapper">
                     <div class="pie-chart-wrapper">
@@ -152,7 +159,7 @@
                     </div>
 
                     <div class="pie-chart-wrapper">
-                        <p class="inner-text">100%</p>
+                        <p class="inner-text">90%</p>
                         <div class="svg-wrapper">
                             <svg
                                 viewBox="0 0 127.28 127.28"
@@ -203,7 +210,7 @@
                 </div>
             </section>
         </section>
-        <footer>
+        <footer data-aos="fade-up">
             <section class="inner-footer">
                 <h1>
                     <a href="mailto: ire.lopez1998@gmail.com" class="mail-link"
@@ -235,5 +242,7 @@
             </svg>
         </footer>
     </body>
-    <script src="script.js"></script>
-</html>
+    <script>
+        AOS.init();
+    </script>
+    </html>

@@ -1,114 +1,173 @@
 <!DOCTYPE html>
 <html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta
+            name="description"
+            content="Portfolio of Graphic design and web development"
+        />
+        <meta
+            name="keywords"
+            content="HTML, CSS, JavaScript, design, graphic design, portfolio"
+        />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Source+Sans+Pro:ital,wght@0,400;0,600;1,400&display=swap"
+            rel="stylesheet"
+        />
+        <link href="https://unpkg.com/pattern.css" rel="stylesheet" />
+        <link
+            href="https://unpkg.com/aos@2.3.1/dist/aos.css"
+            rel="stylesheet"
+        />
+        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+        <link rel="stylesheet" href="style.css" />
+        <title>Irene Lopez</title>
+    </head>
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Portfolio of Graphic design and web development">
-    <meta name="keywords" content="HTML, CSS, JavaScript, design, graphic design, portfolio">
-    <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Source+Sans+Pro:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
-    <link href="https://unpkg.com/pattern.css" rel="stylesheet">
-    <script src="https://kit.fontawesome.com/d6dbae313b.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="style.css">
-    <title>Irene Lopez</title>
-</head>
-
-<body>
-    <section class="main-content">
-        <div class="cursor"></div>
-        <section class="navbar-wrapper">
-            <div class="logo"><a href="index.html">IL</a></div>
-            <nav>
-                <ul>
-                    <li><a href="skills.html">Skills</a></li>
-                    <li><a href="projects.html">Projects</a></li>
-                    <li><a href="contact.html">Contact me!</a></li>
-                </ul>
-            </nav>
-        </section>
-
-        <section class="form-wrapper">
-            <div class="pattern-grid-lg pattern"></div>
-            <div class="circle-form">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 218.26 167.18"><defs><style>.cls-1{fill:#1d1d1b;}</style></defs><g id="Capa_2" data-name="Capa 2"><g id="Capa_1-2" data-name="Capa 1"><path class="cls-1" d="M121.32,3.8c-39.54-9.66-100.13-2.14-117,37-17.56,40.75,21.33,94.74,64,115,55.17,26.19,134.9,4.64,148-39C229.05,74.39,177,17.4,121.32,3.8Z"/></g></g></svg>
-            </div>
-            <form action="" method="post" enctype="multipart/form-data">
-                <div class="input-wrapper">
-                    <label class="is-highlighted">Name</label>
-                    <input type="text" name="name" placeholder="Ire">
+    <body>
+        <section class="main-content">
+            <div class="cursor"></div>
+            <section class="navbar-wrapper">
+                <div class="logo" data-aos="fade-right">
+                    <a href="index.html">IL</a>
                 </div>
+                <nav data-aos="fade-left">
+                    <ul>
+                        <li><a href="skills.html">Skills</a></li>
+                        <li><a href="projects.html">Projects</a></li>
+                        <li><a href="contact.html">Contact me!</a></li>
+                    </ul>
+                </nav>
+            </section>
 
-                <div class="input-wrapper">
-                    <label class="is-highlighted">Surname</label>
-                    <input type="text" name="Surname" placeholder="Lopez">
+            <section class="form-wrapper">
+                <div class="pattern-grid-lg pattern"></div>
+                <div class="circle-form">
+                    <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 218.26 167.18"
+                    >
+                        <defs>
+                            <style>
+                                .cls-1 {
+                                    fill: #1d1d1b;
+                                }
+                            </style>
+                        </defs>
+                        <g id="Capa_2" data-name="Capa 2">
+                            <g id="Capa_1-2" data-name="Capa 1">
+                                <path
+                                    class="cls-1"
+                                    d="M121.32,3.8c-39.54-9.66-100.13-2.14-117,37-17.56,40.75,21.33,94.74,64,115,55.17,26.19,134.9,4.64,148-39C229.05,74.39,177,17.4,121.32,3.8Z"
+                                />
+                            </g>
+                        </g>
+                    </svg>
                 </div>
+                <form action="" method="post" enctype="multipart/form-data">
+                    <div class="input-wrapper">
+                        <label class="is-highlighted">Name</label>
+                        <input type="text" name="name" placeholder="Ire" />
+                    </div>
 
-                <div class="input-wrapper">
-                    <label class="is-highlighted">Message</label>
-                    <textarea name="mensaje" placeholder="Hey Ire! I´m writting to you..."></textarea>
-                </div>
+                    <div class="input-wrapper">
+                        <label class="is-highlighted">Surname</label>
+                        <input type="text" name="Surname" placeholder="Lopez" />
+                    </div>
 
-                <div class="input-wrapper">
-                    <label class="is-highlighted" >Country</label>
-                    <select name="country-selection">                            <option selected="selected">I´m from</option>
+                    <div class="input-wrapper">
+                        <label class="is-highlighted">Message</label>
+                        <textarea
+                            name="mensaje"
+                            placeholder="Hey Ire! I´m writting to you..."
+                        ></textarea>
+                    </div>
+
+                    <div class="input-wrapper">
+                        <label class="is-highlighted">Country</label>
+                        <select name="country-selection">
+                            <option selected="selected">I´m from</option>
                             <option value="1">Arg</option>
                             <option value="2">Mex</option>
                             <option value="3">Usa</option>
                             <option value="4">Col</option>
                             <option value="4">Other</option>
                         </select>
-                </div>
+                    </div>
 
-                <div class="input-wrapper form-newsletter">
-                    <label>Would you like to receive my newsletters?</label>
-                    <div class="radio-button-wrapper">
-                        <div>
-                            <input type="radio" name="option" value="Yes" checked>
-                            <span>Yes!</span>
-                        </div>
+                    <div class="input-wrapper form-newsletter">
+                        <label>Would you like to receive my newsletters?</label>
+                        <div class="radio-button-wrapper">
+                            <div>
+                                <input
+                                    type="radio"
+                                    name="option"
+                                    value="Yes"
+                                    checked
+                                />
+                                <span>Yes!</span>
+                            </div>
 
-                        <div>
-                            <input type="radio" name="option" value="No">
-                            <span>No :(</span>
+                            <div>
+                                <input type="radio" name="option" value="No" />
+                                <span>No :(</span>
+                            </div>
                         </div>
                     </div>
-                </div>
 
-                <div class="input-wrapper is-row form-terms">
-                    <input type="checkbox">
-                    <label>I´ve read and accept the <a href="Privacy">Terms and conditions</a></label>
-                </div>
+                    <div class="input-wrapper is-row form-terms">
+                        <input type="checkbox" />
+                        <label
+                            >I´ve read and accept the
+                            <a href="Privacy">Terms and conditions</a></label
+                        >
+                    </div>
 
-                <div class="input-wrapper is-row form-button">
-                    <input type="reset" class="is-reset-button" value="Reset">
-                    <input type="submit" name="button" value="Send">
-                </div>
-
-            </form>
+                    <div class="input-wrapper is-row form-button">
+                        <input
+                            type="reset"
+                            class="is-reset-button"
+                            value="Reset"
+                        />
+                        <input type="submit" name="button" value="Send" />
+                    </div>
+                </form>
+            </section>
         </section>
-    </section>
-    <footer>
-        <section class="inner-footer">
-            <h1>
-                <a href="mailto: ire.lopez1998@gmail.com" class="mail-link">Ire.lopez1998@gmail.com</a>
-            </h1>
+        <footer data-aos="fade-up">
+            <section class="inner-footer">
+                <h1>
+                    <a href="mailto: ire.lopez1998@gmail.com" class="mail-link"
+                        >Ire.lopez1998@gmail.com</a
+                    >
+                </h1>
 
-            <div class="footer-information">
-                <p>CONTACT ME</p>
-                <div class="footer-icons-wrapper">
-                    <a href="https://www.linkedin.com/in/irene-l%C3%B3pez-492635160/"><i class="fab fa-linkedin"></i></a>
-                    <a href="https://wa.me/543364540424"><i class="fab fa-whatsapp"></i></a>
-                    <a href="https://t.me/lopezzirene"><i class="fab fa-telegram"></i></a>
+                <div class="footer-information">
+                    <p>CONTACT ME</p>
+                    <div class="footer-icons-wrapper">
+                        <a
+                            href="https://www.linkedin.com/in/irene-l%C3%B3pez-492635160/"
+                            ><i class="fab fa-linkedin"></i
+                        ></a>
+                        <a href="https://wa.me/543364540424"
+                            ><i class="fab fa-whatsapp"></i
+                        ></a>
+                        <a href="https://t.me/lopezzirene"
+                            ><i class="fab fa-telegram"></i
+                        ></a>
+                    </div>
                 </div>
-            </div>
-        </section>
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 818.15 170.27">
+            </section>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 818.15 170.27">
                 <path
                     class="cls-1"
                     d="M818.15,170.27c-49-46.56-187.27-56.55-289.74-91.39C464,57,439.43-28.88,352.24,10c-98,43.66-154.71-21.86-222.89,17.61C71.23,61.21,89.44,152.11,0,170.27Z"
                 />
             </svg>
-    </footer>
-</body>
-
+        </footer>
+        <script>
+            AOS.init();
+        </script>
+    </body>
 </html>
