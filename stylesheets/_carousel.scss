@@ -27,8 +27,8 @@ $slide-height: 85vh;
         }
 
         @media #{$mobile-only} {
-            max-width: 320px;
-            margin: 40px;
+            width: 80%;
+            margin: auto;
         }
     }
     .carousel-wrapper {
@@ -41,7 +41,6 @@ $slide-height: 85vh;
         scroll-behavior: smooth;
         @extend %invisible-scrollbar;
         margin-bottom: 60px;
-
 
         .carousel-prev,
         .carousel-next {
@@ -94,8 +93,8 @@ $slide-height: 85vh;
                 right: 0;
                 bottom: 0;
                 top: 0;
-                // box-shadow: inset 0px -40px 120px 0px rgba(0, 0, 0, 0.28);
             }
+
             h1 {
                 font-family: var(--secondary-font);
                 font-size: 30px;
@@ -114,6 +113,11 @@ $slide-height: 85vh;
                 height: $slide-height;
                 width: 950px;
                 object-fit: cover;
+
+                @media #{$mobile-only} {
+                    width: 100vw;
+                    margin-top: 100px;
+                }
             }
         }
     }

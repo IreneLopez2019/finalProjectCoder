@@ -23,8 +23,8 @@
         }
 
         @media #{$mobile-only} {
-            max-width: 320px;
-            margin: 40px;
+            width: 80%;
+            margin: auto;
         }
     }
     .section-title {
