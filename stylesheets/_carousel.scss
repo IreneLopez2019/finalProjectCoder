@@ -1,0 +1,120 @@
+$slide-width: 100vw;
+$slide-height: 85vh;
+
+.main-content {
+    .skills-text {
+        h2 {
+            font-size: 25px;
+        }
+
+        margin: 50px auto;
+        font-size: 16px;
+        line-height: 21px;
+        background-color: white;
+        padding: 20px;
+        position: relative;
+        width: 50vw;
+
+        &::before {
+            content: "";
+            position: absolute;
+            border: 1px solid #000;
+            bottom: -15px;
+            z-index: -1;
+            left: 15px;
+            width: 100%;
+            height: 100%;
+        }
+
+        @media #{$mobile-only} {
+            max-width: 320px;
+            margin: 40px;
+        }
+    }
+    .carousel-wrapper {
+        display: flex;
+        align-items: center;
+        overflow-x: auto;
+        overflow-y: hidden;
+        scroll-snap-type: x mandatory;
+        scroll-snap-points-x: $slide-width;
+        scroll-behavior: smooth;
+        @extend %invisible-scrollbar;
+        margin-bottom: 60px;
+
+
+        .carousel-prev,
+        .carousel-next {
+            position: absolute;
+            z-index: 1;
+            transform: translateY(-50%);
+            background-color: transparent;
+            padding: 15px;
+            border: none;
+            outline: none;
+            cursor: pointer;
+
+            &:hover {
+                svg {
+                    path {
+                        fill: #fff;
+                    }
+                }
+            }
+
+            svg {
+                display: block;
+                height: 24px;
+
+                path {
+                    fill: rgba(122, 122, 122, 0.75);
+                    transition: fill ease 250ms;
+                }
+            }
+        }
+
+        .carousel-prev {
+            left: 25px;
+        }
+
+        .carousel-next {
+            right: 25px;
+        }
+
+        .carousel-slide {
+            position: relative;
+            min-width: $slide-width;
+            scroll-snap-align: start;
+            user-select: none;
+
+            &::before {
+                content: "";
+                position: absolute;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                top: 0;
+                // box-shadow: inset 0px -40px 120px 0px rgba(0, 0, 0, 0.28);
+            }
+            h1 {
+                font-family: var(--secondary-font);
+                font-size: 30px;
+            }
+            .carousel-slide-text {
+                position: absolute;
+                bottom: 25px;
+                left: 25px;
+                text-align: left;
+                color: #000;
+                font-family: var(--secondary-font);
+            }
+
+            img {
+                display: block;
+                height: $slide-height;
+                width: 950px;
+                object-fit: cover;
+            }
+        }
+    }
+}

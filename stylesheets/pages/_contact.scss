@@ -51,7 +51,9 @@
                     div + div {
                         margin-top: 15px;
                     }
-                    input { 
+
+                    input {
+                        font-family: var(--secondary-font);
                         + span {
                             margin-left: 10px;
                         }
@@ -71,6 +73,7 @@
                     &.is-reset-button {
                         background-color: #b63737;
                     }
+
                     + input {
                         margin-left: 20px;
                     }
@@ -95,18 +98,9 @@
             position: relative;
             z-index: 90;
         }
-        .is-highlighted {
-            &::after {
-                position: absolute;
-                content: "";
-                background-color: #aca59f50;
-                width: 45%;
-                height: 9px;
-                bottom: -2px;
-                left: 0;
-                right: 0;
-            }
-        }
+
+
+
         .circle-form {
             grid-column-start: 6;
             grid-column-end: 8;
